@@ -2,6 +2,103 @@
   display: none;
 }
 
+.mobile-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 15px 0;
+
+  &__phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  & .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-item {
+      margin: 0;
+
+      & .phone-number {
+        color: $primary_color_two;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 17px;
+
+        &:hover, &:focus {
+          color: $themeColorTwo;
+        }
+      }
+    }
+
+  }
+
+  &__field {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+
+    &:nth-child(2) {
+      &:before {
+        content: '\f017';
+        font-family: 'Font Awesome 5 Pro';
+        font-size: 18px;
+        color: $themeColorTwo;
+        display: inline-block;
+        margin-right: 6px;
+      }
+    }
+
+    &:nth-child(3) {
+      &:before {
+        content: '\f3c5';
+        font-family: 'Font Awesome 5 Pro';
+        font-size: 18px;
+        color: $themeColorTwo;
+        display: inline-block;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .mobile-block {
+    display: none;
+  }
+}
+
+.mobile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .woo-cart {
+    & .cart-contents {
+      border: none;
+      color: $primary_color_two;
+      margin-right: 3px;
+    }
+  }
+}
+
 @media #{$desktop-max} {
   nav.main-nav {
     display: none;
@@ -16,14 +113,13 @@
     padding: 10px 15px;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #e7e7e7;
-    background-color: $navHeaderMobileBGColor;
+    background-color: $themeColorThree;
     text-align: left;
     z-index: 99;
 
     img {
-      max-height: 50px;
-      width: auto;
+      width: 100%;
+      max-width: 170px;
     }
 
     .hamburger {
@@ -44,7 +140,7 @@
     margin: 0;
     z-index: 100;
     overflow: auto;
-    background-color: $menuMobileBGColor;
+    background-color: $themeColorThree;
     will-change: transform;
     transform: translateX(100%);
     transition: transform .2s ease-out;
@@ -71,6 +167,14 @@
 
       &-item {
         display: block;
+
+        &:hover {
+          background: transparent;
+
+          & .menu-link {
+            color: $themeColorTwo;
+          }
+        }
 
         &-has-children {
           padding-right: 5px;
@@ -121,7 +225,8 @@
       &-link {
         color: $menuMobileTextColor;
         display: block;
-        font-size: $menuMobileLinkFontSize;
+        font-size: 16px;
+        padding: 8px 15px;
       }
     }
 
@@ -130,7 +235,7 @@
       width: auto;
       display: none;
       visibility: visible;
-      background-color: $menuMobileSubMenuBGColor;
+      background-color: $themeColorThree;
       opacity: 1;
       box-shadow: none;
       transition: none;
@@ -155,7 +260,52 @@
 
       &-link {
         color: $menuMobileSubMenuTextColor;
-        font-size: $menuMobileSubMenuLinkFontSize;
+        text-align: center;
+        font-size: 16px;
+        padding: 8px 15px;
+      }
+    }
+  }
+}
+
+.social-mob {
+  padding-top: 10px;
+
+  & .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-item {
+      margin: 0 5px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &-link {
+      background: $themeColorOne;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      & i {
+        color: $themeColorTwo;
+        font-size: 18px;
+      }
+
+      &:hover {
+        background: lighten($themeColorOne, 10%);
+
+        & i {
+          color: darken($themeColorTwo, 5%);
+        }
       }
     }
   }

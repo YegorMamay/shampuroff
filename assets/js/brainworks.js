@@ -37,12 +37,15 @@
     var dropdownPhone = function dropdownPhone() {
         var dropDownBtn = $(".js-dropdown");
         var dropDownList = $(".js-phone-list");
+        var dropDownWrapper = $(".phone-dropdown");
         dropDownBtn.on("click", function() {
             $(this).toggleClass("active").siblings(".js-phone-list").fadeToggle(300);
+            $(this).parents(".phone-dropdown").toggleClass("active");
         });
         $(document).on("click", function(event) {
             if ($(event.target).closest(".js-dropdown, .js-phone-list").length) return;
             dropDownList.fadeOut(300);
+            dropDownWrapper.removeClass("active");
             dropDownBtn.removeClass("active");
         });
     };

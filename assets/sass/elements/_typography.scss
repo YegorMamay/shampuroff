@@ -19,22 +19,22 @@ $ul_line-height: 22px;
 $menu_line-height: 22px;
 
 h1, h2, h3, h4, h5, h6, h1.hero-title {
-    color: $titleFontColor;
+    color: $primary_color_two;
     font-family: $fontFamilyOne;
     line-height: 1.2;
     font-weight: 700;
 
     a {
-        color: $titleFontColor;
+        color: $primary_color_two;
 
         &:hover {
-            color: $titleFontColorActive;
+            color: $themeColorTwo;
         }
     }
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: $titleFontColor;
+    color: $primary_color_two;
     font-family: $fontFamilyOne;
     line-height: 1.2;
     font-weight: 700;

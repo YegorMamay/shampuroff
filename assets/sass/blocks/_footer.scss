@@ -3,7 +3,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $footerBgColor;
+    background: url("/wp-content/themes/shampuroff/assets/img/footer_bg.jpg") no-repeat center/cover;
+    padding: 15px 0 0;
+
+    &__bottom-section {
+        background: $themeColorThree;
+    }
 }
 
 .pre-footer {
@@ -17,12 +22,20 @@
     display: flex;
     justify-content: space-between;
 
+    & .date {
+        color: lighten($themeColorThree, 15%);
+    }
+
+    & .developer {
+        color: $primary_color_two;
+    }
+
     a {
-        color: $footerFontColor;
-        text-decoration: underline;
+        color: $themeColorTwo;
+        text-decoration: none;
 
         &:hover {
-            color: $footerLinkColorActive;
+            color: lighten($themeColorTwo, 15%);
         }
     }
     

@@ -8,12 +8,13 @@
             </div>
         </div><!-- .pre-footer end-->
     <?php endif; ?>
-
-    <div class="container">
-        <div class="copyright">
-            <div class="date"><?php _e('All rights reserved', 'brainworks'); ?> &copy; <?php echo date('Y'); ?></div>
-            <div class="developer">
-                <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a> 
+    <div class="footer__bottom-section">
+        <div class="container">
+            <div class="copyright">
+                <div class="date"><?php _e('All rights reserved', 'brainworks'); ?> &copy; <?php echo date('Y'); ?></div>
+                <div class="developer">
+                    <?php _e('Developed by ', 'brainworks') ?><a href="https://brainworks.pro/" target="_blank">BrainWorks</a>
+                </div>
             </div>
         </div>
     </div>

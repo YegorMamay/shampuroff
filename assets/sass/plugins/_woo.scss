@@ -21,20 +21,26 @@
 }
 
 .cart-contents {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  color: $iconColor;
-  text-align: center;
+  border: 2px solid $themeColorTwo;
+  color: $themeColorTwo;
+  font-size: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   font: bold 12px/1.5 Arial, Helvetica, sans-serif;
+  &:hover, &:focus {
+    border-color: lighten($themeColorTwo, 15%);
+    color: lighten($themeColorTwo, 15%);
+  }
 
   &::before {
-    content: '\f290';
+    content: '\f07a';
     font-family: 'Font Awesome 5 Pro';
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 1;
+    font-size: 18px;
   }
 
   &:hover {
@@ -49,6 +55,18 @@
     bottom: 0;
     padding: 2px;
     font-weight: bold;
+    display: none;
+  }
+}
+
+.cart-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 6px;
+  &__title {
+    color: $primary_color_two;
+    font-size: 16px;
   }
 }
 
