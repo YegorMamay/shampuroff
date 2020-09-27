@@ -170,7 +170,7 @@
                     <div class="header__col">
                         <?php get_search_form(); ?>
                         <div class="header__container">
-                            <a href="" class="header__link">
+                            <a href="/my-account/" class="header__link">
                                 <i class="fal fa-user"></i>
                             </a>
                             <div class="woo-cart woo-cart-popup-wrapper">

@@ -433,4 +433,36 @@
     $(window).load(function() {
         $(document.body).trigger("wc_fragment_refresh");
     });
+    (function() {
+        var currentX = "";
+        var currentY = "";
+        var movementConstant = .02;
+        $(document).mousemove(function(e) {
+            if (currentX === "") currentX = e.pageX;
+            var xdiff = e.pageX - currentX;
+            currentX = e.pageX;
+            if (currentY === "") currentY = e.pageY;
+            var ydiff = e.pageY - currentY;
+            currentY = e.pageY;
+            $(".js-parallax").each(function(i, el) {
+                var movement = (i + 1) * (xdiff * movementConstant);
+                var movementy = (i + 1) * (ydiff * movementConstant);
+                var newX = $(el).position().left + movement;
+                var newY = $(el).position().top + movementy;
+                $(el).css("left", newX + "px");
+                $(el).css("top", newY + "px");
+            });
+        });
+        $(window).on("scroll", function() {
+            var scrollPosition = $(this).scrollTop();
+            var headerSticky = $(".js-header");
+            var headerHeight = headerSticky.outerHeight();
+            if (scrollPosition > headerHeight / 2) {
+                headerSticky.addClass("active");
+            } else {
+                headerSticky.removeClass("active");
+            }
+        });
+        $(window).trigger("scroll");
+    })();
 })(window, document, jQuery, window.jpAjax);

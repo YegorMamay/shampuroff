@@ -157,6 +157,13 @@ img {
     padding: 10px 0;
     font-size: 14px;
     margin-bottom: 10px;
+
+    & a {
+        color: $primary_color_two;
+        &:hover,&:focus {
+            color: $themeColorTwo;
+        }
+    }
 }
 
 .page-name, .page-title {

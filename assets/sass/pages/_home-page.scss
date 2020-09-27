@@ -1,0 +1,229 @@
+.wrapper {
+  background: url("/wp-content/themes/shampuroff/assets/img/main_inner.jpg") no-repeat center/ cover;
+  background-attachment: fixed;
+}
+
+.main-title {
+  text-align: center;
+  margin: 10px 0 20px;
+
+  & span {
+    color: $themeColorTwo;
+  }
+}
+
+.categories-bg {
+  display: none;
+}
+
+@media screen and (min-width: 1360px) {
+  .categories-bg {
+    display: block;
+    width: 100%;
+    max-width: 1920px;
+    height: 760px;
+    background-image: url("/wp-content/themes/shampuroff/assets/img/cat.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.categories-section {
+  padding: 30px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  &__wrapper {
+    background: $primary_color_two;
+    padding: 20px 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    &:hover {
+      & .categories-section__title {
+        transition: all 0.2s;
+        color: $themeColorTwo;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 10px;
+    background: url("/wp-content/themes/shampuroff/assets/img/category_bg.jpg") no-repeat center / contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 63.886%;
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-family: $fontFamilyNeucha;
+    font-weight: normal;
+    text-align: center;
+    height: 34px;
+    overflow: hidden;
+    line-height: normal;
+    transition: all 0.2s;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .categories-section {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .categories-section {
+    &__wrapper {
+      border-radius: 100px;
+      padding: 60px 45px;
+    }
+
+    &__item {
+      width: 33.3333%;
+    }
+
+    &__title {
+      font-size: 20px;
+      height: 45px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .categories-section {
+    &__title {
+      font-size: 26px;
+      height: 55px;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .categories-section {
+    background-image: url("/wp-content/themes/shampuroff/assets/img/cat_bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}
+
+.block-video {
+  padding: 35px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  &__description {
+    background-image: url("/wp-content/themes/shampuroff/assets/img/block_video_decor.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $primary_color_two;
+    width: 270px;
+    height: 165px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    color: $primary_color_two;
+    font-size: 17px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    margin-top: -20px;
+  }
+
+  &__container {
+    width: 100%;
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    & iframe {
+      border-radius: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .block-video {
+    &__wrapper {
+      & iframe {
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .block-video {
+    &__container {
+      background: url("/wp-content/themes/shampuroff/assets/img/video_bg_logo.svg") no-repeat center center/contain;
+    }
+  }
+}
+
+.video-bg {
+  display: none;
+}
+
+@media screen and (min-width: 1360px) {
+  .video-bg {
+    display: block;
+    width: 100%;
+    background-image: url("/wp-content/themes/shampuroff/assets/img/video_bg.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 460px;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    z-index: 1;
+  }
+}
