@@ -3,7 +3,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/wp-content/themes/shampuroff/assets/img/footer_bg.jpg") no-repeat center/cover;
+    background: url("/wp-content/themes/shampuroff/assets/img/footer_bg.jpg") no-repeat center/ cover;
+    background-attachment: fixed;
     padding: 15px 0 0;
 
     &__bottom-section {
@@ -12,8 +13,174 @@
 }
 
 .pre-footer {
-    padding: 20px 0;
-    background-color: lighten($footerBgColor, 10%);
+    padding: 20px 0 25px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & .widget-item {
+
+        &:last-child {
+            & ul {
+                padding-top: 56px;
+            }
+        }
+
+        & .logo {
+            margin-top: -15px;
+            padding-bottom: 15px;
+            &-img {
+                width: 100%;
+                max-width: 240px;
+            }
+        }
+
+        & .phone {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            &-item {
+                margin: 0;
+            }
+            &-number {
+                font-size: 16px;
+                padding: 4px 0;
+                font-weight: normal;
+            }
+        }
+
+        & .header__field {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        & .social {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 15px;
+            margin-bottom: 20px;
+
+            &-item {
+                margin: 0 5px 0 0;
+            }
+
+            &-link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+
+        & .widget-title {
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        & ul {
+          @extend %reset-list;
+            & li {
+                & a {
+                    color: $primary_color_two;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                    &:hover, &:focus {
+                        color: $themeColorTwo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .pre-footer {
+        min-height: 400px;
+        padding-top: 4%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pre-footer {
+        & .widget-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            & .widget-title {
+                font-size: 24px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            & .phone {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            & .logo {
+                margin: 0;
+                &-img {
+                    max-width: 175px;
+                }
+            }
+
+            &:last-child {
+                & ul {
+                    padding-top: 0;
+                }
+            }
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 15px;
+
+                & li {
+                    & a {
+                        padding: 3px 0;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            & .social {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        & .textwidget {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
 }
 
 .copyright {
