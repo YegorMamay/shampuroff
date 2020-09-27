@@ -12392,7 +12392,7 @@ select {
 }
 
 .wrapper {
-  background: url("/wp-content/themes/shampuroff/assets/img/main_inner.jpg") no-repeat center/cover;
+  background: url("assets/img/main_inner.jpg") no-repeat center/cover;
   background-attachment: fixed;
 }
 
@@ -12415,7 +12415,7 @@ select {
     width: 100%;
     max-width: 1920px;
     height: 760px;
-    background-image: url("/wp-content/themes/shampuroff/assets/img/cat.svg");
+    background-image: url("assets/img/cat.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -12476,7 +12476,7 @@ select {
   width: 100%;
   max-width: 260px;
   margin: 0 auto 10px;
-  background: url("/wp-content/themes/shampuroff/assets/img/category_bg.jpg") no-repeat center/contain;
+  background: url("assets/img/category_bg.jpg") no-repeat center/contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12551,7 +12551,7 @@ select {
 
 @media screen and (min-width: 1360px) {
   .categories-section {
-    background-image: url("/wp-content/themes/shampuroff/assets/img/cat_bg.png");
+    background-image: url("assets/img/cat_bg.png");
     background-repeat: no-repeat;
     background-position: top right;
   }
@@ -12565,7 +12565,7 @@ select {
 }
 
 .block-video__description {
-  background-image: url("/wp-content/themes/shampuroff/assets/img/block_video_decor.svg");
+  background-image: url("assets/img/block_video_decor.svg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -12619,7 +12619,7 @@ select {
 
 @media screen and (min-width: 1360px) {
   .block-video__container {
-    background: url("/wp-content/themes/shampuroff/assets/img/video_bg_logo.svg") no-repeat center center/contain;
+    background: url("assets/img/video_bg_logo.svg") no-repeat center center/contain;
   }
 }
 
@@ -12631,7 +12631,7 @@ select {
   .video-bg {
     display: block;
     width: 100%;
-    background-image: url("/wp-content/themes/shampuroff/assets/img/video_bg.svg");
+    background-image: url("assets/img/video_bg.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -14737,7 +14737,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
 
 .header__logo:before {
   content: '';
-  background: url("/wp-content/themes/shampuroff/assets/img/logo_bg.svg") no-repeat center/contain;
+  background: url("assets/img/logo_bg.svg") no-repeat center/contain;
   display: block;
   width: 100%;
   height: 110px;
@@ -14904,7 +14904,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
   display: block;
   width: 100%;
   height: 15px;
-  background: url("/wp-content/themes/shampuroff/assets/img/btn_dash.svg") no-repeat center/contain;
+  background: url("assets/img/btn_dash.svg") no-repeat center/contain;
 }
 
 .header__col {
@@ -15912,7 +15912,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
 
 @media screen and (min-width: 1360px) {
   .footer {
-    background-image: url("/wp-content/themes/shampuroff/assets/img/footer_image.png");
+    background-image: url("assets/img/footer_image.png");
     background-repeat: no-repeat;
     background-position: top right;
   }

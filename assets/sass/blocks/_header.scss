@@ -70,7 +70,7 @@
         z-index: 1;
         &:before {
             content: '';
-            background: url("/wp-content/themes/shampuroff/assets/img/logo_bg.svg") no-repeat center/contain;
+            background: image-url("logo_bg.svg") no-repeat center/contain;
             display: block;
             width: 100%;
             height: 110px;
@@ -193,7 +193,7 @@
             display: block;
             width: 100%;
             height: 15px;
-            background: url("/wp-content/themes/shampuroff/assets/img/btn_dash.svg") no-repeat center / contain;
+            background: image-url("btn_dash.svg") no-repeat center / contain;
         }
     }
 

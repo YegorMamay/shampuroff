@@ -1,5 +1,5 @@
 .wrapper {
-  background: url("/wp-content/themes/shampuroff/assets/img/main_inner.jpg") no-repeat center/ cover;
+  background: image-url("main_inner.jpg") no-repeat center/ cover;
   background-attachment: fixed;
 }
 
@@ -22,7 +22,7 @@
     width: 100%;
     max-width: 1920px;
     height: 760px;
-    background-image: url("/wp-content/themes/shampuroff/assets/img/cat.svg");
+    background-image: image-url("cat.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -69,7 +69,7 @@
     width: 100%;
     max-width: 260px;
     margin: 0 auto 10px;
-    background: url("/wp-content/themes/shampuroff/assets/img/category_bg.jpg") no-repeat center / contain;
+    background: image-url("category_bg.jpg") no-repeat center / contain;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,7 @@
 
 @media screen and (min-width: 1360px) {
   .categories-section {
-    background-image: url("/wp-content/themes/shampuroff/assets/img/cat_bg.png");
+    background-image: image-url("cat_bg.png");
     background-repeat: no-repeat;
     background-position: top right;
   }
@@ -155,7 +155,7 @@
   z-index: 1;
 
   &__description {
-    background-image: url("/wp-content/themes/shampuroff/assets/img/block_video_decor.svg");
+    background-image: image-url("block_video_decor.svg");
     background-repeat: no-repeat;
     background-size: cover;
     color: $primary_color_two;
@@ -206,7 +206,7 @@
 @media screen and (min-width: 1360px) {
   .block-video {
     &__container {
-      background: url("/wp-content/themes/shampuroff/assets/img/video_bg_logo.svg") no-repeat center center/contain;
+      background: image-url("video_bg_logo.svg") no-repeat center center/contain;
     }
   }
 }
@@ -219,7 +219,7 @@
   .video-bg {
     display: block;
     width: 100%;
-    background-image: url("/wp-content/themes/shampuroff/assets/img/video_bg.svg");
+    background-image: image-url("video_bg.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
