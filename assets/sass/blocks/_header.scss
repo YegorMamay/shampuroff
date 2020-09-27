@@ -222,6 +222,7 @@
                 border: none;
                 border-bottom: 2px solid #c4c4c4;
                 transition: all 0.2s;
+                border-radius: 0;
                 &::placeholder {
                     color: lighten($themeColorThree, 15%);
                 }
@@ -232,10 +233,13 @@
             }
 
             & .btn-search {
+                box-shadow: none;
+                background-image: none;
                 background: transparent;
                 border: none;
                 width: 25px;
                 height: 35px;
+                border-radius: 0;
                 position: absolute;
                 left: 0;
                 top: -1px;
@@ -249,6 +253,9 @@
                     background: transparent;
                     outline: none;
                     box-shadow: none;
+                }
+                &:active {
+                    transform: none;
                 }
 
                 & i {

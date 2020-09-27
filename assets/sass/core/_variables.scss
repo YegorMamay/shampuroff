@@ -29,11 +29,11 @@ $primary_color_two: #fff !default; //white
 // THEME COLORS
 $themeColorOne: #1A191C; // Обычно самый темный цвет. Используется для: заголовков h1-h6 - $titleFontColor и других.
 $themeColorTwo: #DC2228; // Основной/акцентный цвет бренда. Поменять значение этой переменной согласно макета обязательно!
-$themeColorThree: #2D282F;
+$themeColorThree: #2d282f;
 
-$borderRadius: 0;
+$borderRadius: 25px;
 $borderColor: lighten($primary_color_one, 80%);
-$shadow: 0 10px 20px rgba($primary_color_one, .2);
+$shadow: 0 5px 12px 1px rgba(darken($themeColorTwo, 5%), .5);
 
 // SELECTION: цвет фона и текста при выделении его курсором
 $selectionBgColor: $themeColorTwo;
