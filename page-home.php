@@ -49,10 +49,12 @@ $category_list = get_field('category_list');
 </div>
 <div class="container">
 <?php get_template_part('loops/content', 'home'); ?>
-<button type="button" class="btn-custom">
+    <?php /*
+    <button type="button" class="btn-custom">
     <span class="btn-stripe"></span>
     <span class="btn-stripe"></span>
     ВЫБРАТЬ ШАШЛЫК
-</button>
+    </button>
+    */?>
 </div><!-- /.container -->
 <?php get_footer(); ?>
