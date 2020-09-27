@@ -473,3 +473,77 @@ fieldset:disabled a.btn {
         font-size: 14px;
     }
 }
+
+.btn-custom {
+    //background: transparent url("/wp-content/themes/shampuroff/assets/img/btn_bg.svg") no-repeat center center;
+    background: $themeColorTwo;
+    color: $primary_color_two;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $fontFamilyIstok;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    text-transform: uppercase;
+    padding: 25px 35px;
+    font-size: $btn-font-size;
+    line-height: normal;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 55%;
+    z-index: 1;
+    transition: all 0.2s;
+    &:hover {
+        background: darken($themeColorTwo, 10%);
+        transition: all 0.2s;
+
+        & .btn-stripe {
+            transition: all 0.2s;
+            border-color: darken($themeColorTwo, 10%);
+        }
+    }
+    & .btn-stripe {
+        display: block;
+        background: transparent;
+        position: absolute;
+        z-index: -1;
+        border: 1px solid $themeColorTwo;
+        transition: all 0.2s;
+        &:first-child {
+            border-radius: 55%;
+            width: 100%;
+            height: 100%;
+            left: 3px;
+            top: 4px;
+            transform: rotate(-2deg);
+        }
+        &:last-child {
+            border-radius: 45%;
+            width: 100%;
+            height: 100%;
+            left: 3px;
+            top: -5px;
+            transform: rotate(1deg);
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .btn-custom {
+        padding: 16px 28px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-custom {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+;
+}

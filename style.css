@@ -14542,6 +14542,100 @@ fieldset:disabled .woocommerce a.added_to_cart,
   }
 }
 
+.btn-custom {
+  background: #DC2228;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Istok Web", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  padding: 25px 35px;
+  font-size: 15px;
+  line-height: normal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 55%;
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-custom:hover {
+  background: #b01b20;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-custom:hover .btn-stripe {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-color: #b01b20;
+}
+
+.btn-custom .btn-stripe {
+  display: block;
+  background: transparent;
+  position: absolute;
+  z-index: -1;
+  border: 1px solid #DC2228;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-custom .btn-stripe:first-child {
+  border-radius: 55%;
+  width: 100%;
+  height: 100%;
+  left: 3px;
+  top: 4px;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+
+.btn-custom .btn-stripe:last-child {
+  border-radius: 45%;
+  width: 100%;
+  height: 100%;
+  left: 3px;
+  top: -5px;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+@media screen and (max-width: 991px) {
+  .btn-custom {
+    padding: 16px 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn-custom {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+}
+
 .text-gradient {
   display: table;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #DC2228), color-stop(75%, #1A191C), to(#1A191C));
