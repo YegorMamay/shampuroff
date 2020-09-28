@@ -12393,7 +12393,6 @@ select {
 
 .wrapper {
   background: url("assets/img/main_inner.jpg") no-repeat center/cover;
-  background-attachment: fixed;
 }
 
 .main-title {
@@ -12415,6 +12414,7 @@ select {
     width: 100%;
     max-width: 1920px;
     height: 760px;
+    padding: 30px 0;
     background-image: url("assets/img/cat.svg");
     background-position: top;
     background-repeat: no-repeat;
@@ -12506,6 +12506,8 @@ select {
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .categories-section__title {
@@ -12546,6 +12548,11 @@ select {
   .categories-section__title {
     font-size: 26px;
     height: 55px;
+  }
+  .categories-section__item:hover .categories-section__image {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    top: -20px;
   }
 }
 
@@ -14660,6 +14667,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
   color: #fff;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  position: static !important;
 }
 
 .header.active {

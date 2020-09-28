@@ -1,326 +1,341 @@
 .header {
-    background-color: transparent;
-    color: $headerFontColor;
+  background-color: transparent;
+  color: $headerFontColor;
+  transition: all 0.2s;
+  position: static !important;
+
+  &.active {
+    background-color: $themeColorOne;
     transition: all 0.2s;
-    &.active {
-        background-color: $themeColorOne;
-        transition: all 0.2s;
+  }
+
+  &.is-sticky {
+
+  }
+
+  &.is-autohide {
+
+  }
+
+  &.is-transparent {
+
+  }
+
+  &.is-solid {
+
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 41;
+    transition: .2s transform, .2s visibility, .3s background-color;
+    will-change: transform, visibility, background-color;
+
+    &.onscroll-hide {
+      visibility: hidden;
+      transform: translateY(-100%);
     }
 
-    &.is-sticky {
+    &.onscroll-show {
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
 
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding: 15px 0;
+  }
+
+  &__column {
+    width: 35%;
+    padding: 0 15px;
+
+    &:nth-child(2) {
+      width: 30%;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      background: image-url("logo_bg.svg") no-repeat center/contain;
+      display: block;
+      width: 100%;
+      height: 110px;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: -15px;
+      z-index: -1;
+    }
+  }
+
+  &__description {
+    color: $themeColorTwo;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    padding-top: 3px;
+  }
+
+  &__nav {
+    background: $themeColorThree;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  &__field {
+    color: $primary_color_two;
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+
+    & i {
+      color: $themeColorTwo;
+      font-size: 16px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+
+  &__left-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 10px;
+
+    & .header__field {
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+
+  & .social {
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &-item {
+      margin: 0 5px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
     }
 
-    &.is-autohide {
+    &-link {
+      background: $themeColorThree;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
 
-    }
-
-    &.is-transparent {
-
-    }
-
-    &.is-solid {
-
-    }
-
-    &.is-fixed {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 41;
-        transition: .2s transform, .2s visibility, .3s background-color;
-        will-change: transform, visibility, background-color;
-
-        &.onscroll-hide {
-            visibility: hidden;
-            transform: translateY(-100%);
-        }
-
-        &.onscroll-show {
-            visibility: visible;
-            transform: translateY(0);
-        }
-    }
-
-    &__row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-        padding: 15px 0;
-    }
-
-    &__column {
-        width: 35%;
-        padding: 0 15px;
-        &:nth-child(2) {
-            width: 30%;
-        }
-    }
-
-    &__logo {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 1;
-        &:before {
-            content: '';
-            background: image-url("logo_bg.svg") no-repeat center/contain;
-            display: block;
-            width: 100%;
-            height: 110px;
-            position: absolute;
-            transform: translateX(-50%);
-            left: 50%;
-            top: -15px;
-            z-index: -1;
-        }
-    }
-
-    &__description {
-        color: $themeColorTwo;
-        font-size: 15px;
-        line-height: 1.8;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%;
-        padding-top: 3px;
-    }
-
-    &__nav {
-        background: $themeColorThree;
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    &__field {
-        color: $primary_color_two;
-        font-size: 14px;
-        display: flex;
-        align-items: baseline;
-        justify-content: flex-start;
-
-        & i {
-            color: $themeColorTwo;
-            font-size: 16px;
-            display: inline-block;
-            margin-right: 8px;
-        }
-    }
-
-    &__left-row {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        padding-top: 10px;
-
-        & .header__field {
-            width: 100%;
-            max-width: 150px;
-        }
-    }
-
-    & .social {
-        margin-left: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
-        &-item {
-            margin: 0 5px 0 0;
-            &:last-child {
-                margin: 0;
-            }
-        }
-
-        &-link {
-            background: $themeColorThree;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-
-            & i {
-                color: $themeColorTwo;
-                font-size: 18px;
-            }
-            &:hover {
-                background: lighten($themeColorThree, 10%);
-                & i {
-                    color: darken($themeColorTwo, 5%);
-                }
-            }
-        }
-    }
-
-    &__button {
-        background: transparent;
-        color: $themeColorTwo;
-        border: none;
-        padding: 0;
-        font-size: 15px;
-        font-weight: 700;
-        text-transform: uppercase;
-        text-align: center;
-        transition: all 0.2s;
-        cursor: pointer;
-        display: inline-block;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        &:hover, &:focus {
-            background: transparent;
-            border: none;
-            box-shadow: none;
-            outline: none;
-            color: lighten($themeColorTwo, 10%);
-            transition: all 0.2s;
-        }
-        &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 15px;
-            background: image-url("btn_dash.svg") no-repeat center / contain;
-        }
-    }
-
-    &__col {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 10px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        & .navbar-form {
-            max-width: 200px;
-            margin: 0;
-            position: relative;
-
-            & .form-control {
-                color: $primary_color_two;
-                font-size: 16px;
-                background-color: transparent;
-                height: 35px;
-                padding: 5px 10px 5px 25px;
-                width: 100%;
-                border: none;
-                border-bottom: 2px solid #c4c4c4;
-                transition: all 0.2s;
-                border-radius: 0;
-                &::placeholder {
-                    color: lighten($themeColorThree, 15%);
-                }
-                &:focus {
-                    transition: all 0.2s;
-                    border-color: $themeColorTwo;
-                }
-            }
-
-            & .btn-search {
-                box-shadow: none;
-                background-image: none;
-                background: transparent;
-                border: none;
-                width: 25px;
-                height: 35px;
-                border-radius: 0;
-                position: absolute;
-                left: 0;
-                top: -1px;
-                z-index: 1;
-                padding: 0;
-                display: inline-flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                &:hover, &:focus {
-                    background: transparent;
-                    outline: none;
-                    box-shadow: none;
-                }
-                &:active {
-                    transform: none;
-                }
-
-                & i {
-                    color: $themeColorTwo;
-                    font-size: 15px;
-                }
-            }
-        }
-    }
-
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: calc(100% - 200px);
-        padding-left: 15px;
-
-        & .woo-cart {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-            & .amount {
-                font-size: 15px;
-                color: lighten($themeColorThree, 15%);
-            }
-        }
-    }
-
-    &__link {
-        border: 2px solid $themeColorTwo;
+      & i {
         color: $themeColorTwo;
         font-size: 18px;
-        border-radius: 50%;
+      }
+
+      &:hover {
+        background: lighten($themeColorThree, 10%);
+
+        & i {
+          color: darken($themeColorTwo, 5%);
+        }
+      }
+    }
+  }
+
+  &__button {
+    background: transparent;
+    color: $themeColorTwo;
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    &:hover, &:focus {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      color: lighten($themeColorTwo, 10%);
+      transition: all 0.2s;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 15px;
+      background: image-url("btn_dash.svg") no-repeat center / contain;
+    }
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & .navbar-form {
+      max-width: 200px;
+      margin: 0;
+      position: relative;
+
+      & .form-control {
+        color: $primary_color_two;
+        font-size: 16px;
+        background-color: transparent;
+        height: 35px;
+        padding: 5px 10px 5px 25px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #c4c4c4;
+        transition: all 0.2s;
+        border-radius: 0;
+
+        &::placeholder {
+          color: lighten($themeColorThree, 15%);
+        }
+
+        &:focus {
+          transition: all 0.2s;
+          border-color: $themeColorTwo;
+        }
+      }
+
+      & .btn-search {
+        box-shadow: none;
+        background-image: none;
+        background: transparent;
+        border: none;
+        width: 25px;
+        height: 35px;
+        border-radius: 0;
+        position: absolute;
+        left: 0;
+        top: -1px;
+        z-index: 1;
+        padding: 0;
         display: inline-flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
+
         &:hover, &:focus {
-            border-color: lighten($themeColorTwo, 15%);
-            color: lighten($themeColorTwo, 15%);
+          background: transparent;
+          outline: none;
+          box-shadow: none;
         }
 
+        &:active {
+          transform: none;
+        }
+
+        & i {
+          color: $themeColorTwo;
+          font-size: 15px;
+        }
+      }
     }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 200px);
+    padding-left: 15px;
+
+    & .woo-cart {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & .amount {
+        font-size: 15px;
+        color: lighten($themeColorThree, 15%);
+      }
+    }
+  }
+
+  &__link {
+    border: 2px solid $themeColorTwo;
+    color: $themeColorTwo;
+    font-size: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    &:hover, &:focus {
+      border-color: lighten($themeColorTwo, 15%);
+      color: lighten($themeColorTwo, 15%);
+    }
+
+  }
 }
 
 @media screen and (min-width: 1300px) {
-    .header {
-        &__col {
-            & .navbar-form {
-                max-width: 240px;
-            }
-        }
-
-        &__container {
-            width: calc(100% - 240px);
-        }
+  .header {
+    &__col {
+      & .navbar-form {
+        max-width: 240px;
+      }
     }
+
+    &__container {
+      width: calc(100% - 240px);
+    }
+  }
 }
 
 @media #{$desktop-max} {
-    .header {
-        display: none !important;
-    }
+  .header {
+    display: none !important;
+  }
 }
