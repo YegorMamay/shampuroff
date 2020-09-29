@@ -11,7 +11,7 @@ $category_list = get_field('category_list');
     <?php $top_slider = get_field('first_screen_slider'); ?>
     <?php echo do_shortcode($top_slider); ?>
 </div>
-<div class="categories-section">
+<div class="categories-section" id="product-categories">
     <div class="categories-bg js-parallax"></div>
     <div class="container">
         <?php if(!empty($category_list)) { ?>

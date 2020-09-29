@@ -10552,7 +10552,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   width: 200px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
   .woocommerce ul.products li.product,
   .woocommerce-page ul.products li.product,
   .woocommerce-page[class*=columns-] ul.products li.product,
@@ -10566,6 +10566,29 @@ a.wpgis-popup, a.wpgis-popup:hover {
   .woocommerce[class*=columns-] ul.products li.product:nth-child(2n) {
     float: none;
   }
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  background-color: inherit;
+}
+
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
+  background-color: indianred;
+  background-image: -webkit-gradient(linear, left top, right top, from(#dc2228), color-stop(51%, #a3060c), to(#dc2228));
+  background-image: linear-gradient(to right, #dc2228 0%, #a3060c 51%, #dc2228 100%);
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.woocommerce-loop-category__title {
+  font-size: 22px !important;
+}
+
+.woocommerce-loop-category__title .count {
+  display: none;
 }
 
 .embed-responsive {
@@ -12554,6 +12577,9 @@ select {
     transition: all 0.3s;
     top: -20px;
   }
+  .categories-section .main-title {
+    margin-bottom: 35px;
+  }
 }
 
 @media screen and (min-width: 1360px) {
@@ -12908,12 +12934,12 @@ i.button-style {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 a:hover, a:active, a:focus {
   text-decoration: none;
-  color: #333333;
+  color: #DC2228;
 }
 
 @media (max-width: 574px) {
@@ -14250,60 +14276,14 @@ fieldset:disabled .woocommerce a.added_to_cart,
   pointer-events: none;
 }
 
-.btn-primary, .woocommerce a.added_to_cart {
-  background-image: -webkit-gradient(linear, left top, right top, from(#dc2228), color-stop(51%, #a3060c), to(#dc2228));
-  background-image: linear-gradient(to right, #dc2228 0%, #a3060c 51%, #dc2228 100%);
-  background-size: 200% auto;
-  color: white;
-  border-color: transparent;
-  -webkit-box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5);
-          box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5);
-}
-
-.btn-primary:hover, .woocommerce a.added_to_cart:hover {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  color: white;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-position: right center;
-  border-color: transparent;
-}
-
-.btn-primary:focus, .woocommerce a.added_to_cart:focus, .btn-primary.focus, .woocommerce a.focus.added_to_cart {
-  -webkit-box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.8);
-          box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.8);
-}
-
-.btn-primary.disabled, .woocommerce a.disabled.added_to_cart, .btn-primary:disabled, .woocommerce a.added_to_cart:disabled {
-  color: #fff;
-  background: #570e10;
-  border-color: #570e10;
-}
-
-.btn-primary:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
-  color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(#dc2228), color-stop(51%, #a3060c), to(#dc2228));
-  background-image: linear-gradient(to right, #dc2228 0%, #a3060c 51%, #dc2228 100%);
-  border-color: transparent;
-}
-
-.btn-primary:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-position: right;
-  -webkit-box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.5);
-}
-
 .btn-secondary, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
+  background-image: -webkit-gradient(linear, left top, right top, from(#dc2228), color-stop(51%, #a3060c), to(#dc2228));
+  background-image: linear-gradient(to right, #dc2228 0%, #a3060c 51%, #dc2228 100%);
   background-size: 200% auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2d282f), color-stop(51%, #3d3c3d), to(#2d282f));
-  background-image: linear-gradient(to right, #2d282f 0%, #3d3c3d 51%, #2d282f 100%);
   color: white;
   border-color: transparent;
   -webkit-box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5);
@@ -14327,8 +14307,8 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.button:focus, .btn-secondary.focus, html .formcraft-css .fc-form .form-element .submit-cover .focus.submit-button, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
 .woocommerce button.focus.button,
 .woocommerce input.focus.button {
-  -webkit-box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5), 0 0 0 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5), 0 0 0 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.8);
+          box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.8);
 }
 
 .btn-secondary.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
@@ -14336,9 +14316,9 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.disabled.button, .btn-secondary:disabled, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:disabled, .woocommerce #respond input#submit:disabled, .woocommerce a.button:disabled,
 .woocommerce button.button:disabled,
 .woocommerce input.button:disabled {
-  color: #7c6e82;
-  background: #7c6e82;
-  border-color: #7c6e82;
+  color: #fff;
+  background: #570e10;
+  border-color: #570e10;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active, .woocommerce a.button:not(:disabled):not(.disabled):active,
@@ -14347,9 +14327,8 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce button.button:not(:disabled):not(.disabled).active,
 .woocommerce input.button:not(:disabled):not(.disabled).active {
   color: white;
-  background-color: #3a343d;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2d282f), color-stop(51%, #3d3c3d), to(#2d282f));
-  background-image: linear-gradient(to right, #2d282f 0%, #3d3c3d 51%, #2d282f 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#dc2228), color-stop(51%, #a3060c), to(#dc2228));
+  background-image: linear-gradient(to right, #dc2228 0%, #a3060c 51%, #dc2228 100%);
   border-color: transparent;
 }
 
@@ -14358,6 +14337,53 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled).active:focus {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-position: right;
+  -webkit-box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 20px 1px rgba(154, 24, 28, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary, .woocommerce a.added_to_cart {
+  background-size: 200% auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2d282f), color-stop(51%, #3d3c3d), to(#2d282f));
+  background-image: linear-gradient(to right, #2d282f 0%, #3d3c3d 51%, #2d282f 100%);
+  color: white;
+  border-color: transparent;
+  -webkit-box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5);
+          box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5);
+}
+
+.btn-primary:hover, .woocommerce a.added_to_cart:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
+  border-color: transparent;
+}
+
+.btn-primary:focus, .woocommerce a.added_to_cart:focus, .btn-primary.focus, .woocommerce a.focus.added_to_cart {
+  -webkit-box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5), 0 0 0 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 12px 1px rgba(198, 31, 36, 0.5), 0 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary.disabled, .woocommerce a.disabled.added_to_cart, .btn-primary:disabled, .woocommerce a.added_to_cart:disabled {
+  color: #7c6e82;
+  background: #7c6e82;
+  border-color: #7c6e82;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
+  color: white;
+  background-color: #3a343d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2d282f), color-stop(51%, #3d3c3d), to(#2d282f));
+  background-image: linear-gradient(to right, #2d282f 0%, #3d3c3d 51%, #2d282f 100%);
+  border-color: transparent;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-position: right;
@@ -16043,7 +16069,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
   text-transform: uppercase;
   display: block;
   width: 100%;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .pre-footer .widget-item ul li a:hover, .pre-footer .widget-item ul li a:focus {

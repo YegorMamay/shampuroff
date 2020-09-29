@@ -134,7 +134,7 @@
                             ])
                             ?>
                         </div>
-                        <p class="header__description">МАГАЗИН ГОТОВОГО ШАШЛЫКА</p>
+                        <p class="header__description"><?php bloginfo('description'); ?></p>
                     </div>
                 </div>
                 <div class="header__column">
@@ -179,7 +179,7 @@
                                     <?php echo woocommerce_cart_popup(); ?>
                                 <?php } ?>
                                 <span id="modal-cart" class="cart-caption">
-                                    <p class="cart-caption__title">Корзина</p>
+                                    <p class="cart-caption__title">Кошик</p>
                                 <?php echo woocommerce_get_total_price(); ?>
                             </span>
                             </div>

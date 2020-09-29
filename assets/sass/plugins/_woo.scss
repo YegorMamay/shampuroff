@@ -619,7 +619,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   width: 200px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
   .woocommerce,
   .woocommerce-page,
   .woocommerce-page[class*=columns-],
@@ -638,5 +638,27 @@ a.wpgis-popup, a.wpgis-popup:hover {
         }
       }
     }
+  }
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  background-color: inherit;
+}
+
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
+  background-color: indianred;
+  background-image:  linear-gradient(to right, rgba(220,34,40,1) 0%, rgba(163,6,12,1) 51%, rgba(220,34,40,1) 100%);
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+  background: transparent;
+  border: 1px solid $primary_color_two;
+}
+
+.woocommerce-loop-category__title {
+  font-size: 22px !important;
+
+  & .count {
+    display: none;
   }
 }
