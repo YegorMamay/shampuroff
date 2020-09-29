@@ -12,7 +12,10 @@ $category_list = get_field('category_list');
     <?php echo do_shortcode($top_slider); ?>
 </div>
 <div class="categories-section" id="product-categories">
-    <div class="categories-bg js-parallax"></div>
+    <div class="cat-icon left js-cat-parallax"></div>
+    <div class="cat-icon right js-cat-parallax"></div>
+    <div class="cat-icon right-bottom js-cat-parallax"></div>
+    <div class="cat-image js-cat-img"></div>
     <div class="container">
         <?php if(!empty($category_list)) { ?>
             <h2 class="h2 main-title">
@@ -32,13 +35,14 @@ $category_list = get_field('category_list');
     </div>
 </div>
 <div class="block-video">
-    <div class="video-bg js-parallax"></div>
     <div class="container">
         <div class="block-video__description">
             <span class="block-video__text"><?php echo get_post_meta(get_the_ID(), 'block_video_title', true); ?></span>
         </div>
     </div>
     <div class="block-video__container">
+        <div class="video-icon-left js-parallax-group"></div>
+        <div class="video-icon-right js-parallax-group"></div>
         <div class="container">
             <div class="block-video__wrapper">
                 <?php $block_video = get_field('block_video_item'); ?>

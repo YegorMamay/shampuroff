@@ -46,6 +46,8 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
   }
 
   &__item {
@@ -155,14 +157,6 @@
   }
 }
 
-@media screen and (min-width: 1360px) {
-  .categories-section {
-    background-image: image-url("cat_bg.png");
-    background-repeat: no-repeat;
-    background-position: top right;
-  }
-}
-
 .block-video {
   padding: 35px 0;
   width: 100%;
@@ -222,6 +216,8 @@
   .block-video {
     &__container {
       background: image-url("video_bg_logo.svg") no-repeat center center/contain;
+      position: relative;
+      z-index: 1;
     }
   }
 }
@@ -243,5 +239,92 @@
     top: 35%;
     left: 0;
     z-index: 1;
+  }
+}
+
+.video-icon-left {
+  display: none;
+}
+
+.video-icon-right {
+  display: none;
+}
+
+@media screen and (min-width: 1360px) {
+  .video-icon-left {
+    display: block;
+    background-image: image-url('video_bg_left.svg');
+    background-repeat: no-repeat;
+    width: 348px;
+    height: 420px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  .video-icon-right {
+    display: block;
+    background-image: image-url('video_bg_right.svg');
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 248px;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    z-index: 0;
+  }
+}
+
+.cat-icon {
+  display: none;
+}
+
+.cat-image {
+  display: none;
+}
+
+@media screen and (min-width: 1360px) {
+  .cat-icon {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    &.left {
+      background-image: image-url('cat_left_icon.svg');
+      width: 396px;
+      height: 506px;
+      top: 5%;
+      left: 0;
+    }
+
+    &.right {
+      background-image: image-url('cat_right_icon.svg');
+      width: 80px;
+      height: 145px;
+      top: 0;
+      right: 5%;
+    }
+
+    &.right-bottom {
+      background-image: image-url('cat_right_icon_2.svg');
+      width: 125px;
+      height: 140px;
+      top: 63%;
+      right: 2%;
+    }
+  }
+
+  .cat-image {
+    display: block;
+    background-image: image-url('cat_image.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: 155px;
+    right: 0;
+    z-index: 0;
   }
 }

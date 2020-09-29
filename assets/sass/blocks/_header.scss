@@ -9,6 +9,10 @@
     transition: all 0.2s;
   }
 
+  & .cart-popup {
+    background: $themeColorOne;
+  }
+
   &.is-sticky {
 
   }

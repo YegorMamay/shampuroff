@@ -32,6 +32,7 @@
   width: 40px;
   height: 40px;
   font: bold 12px/1.5 Arial, Helvetica, sans-serif;
+
   &:hover, &:focus {
     border-color: lighten($themeColorTwo, 15%);
     color: lighten($themeColorTwo, 15%);
@@ -64,6 +65,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 6px;
+
   &__title {
     color: $primary_color_two;
     font-size: 16px;
@@ -320,40 +322,40 @@
 
 // Category page
 ul.products li.product {
+  .cart-custom-button {
+    position: absolute;
+    top: 220px;
+    right: 93px;
+    background: $themeColorTwo;
+    padding: 5px 8px;
+    border-radius: $borderRadius;
+    color: $primary_color_two;
+    opacity: 0;
+    @include smooth_animation;
+  }
+
+  .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
+    width: 0;
+    height: 0;
+    top: 220px;
+    left: 93px;
+    background: $themeColorTwo;
+    padding: 17px;
+    border-radius: $borderRadius;
+    color: $primary_color_two;
+    opacity: 0;
+    @include smooth_animation;
+  }
+
+  &:hover {
     .cart-custom-button {
-        position: absolute;
-        top: 220px;
-        right: 93px;
-        background: $themeColorTwo;
-        padding: 5px 8px;
-        border-radius: $borderRadius;
-        color: $primary_color_two;
-        opacity: 0;
-        @include smooth_animation;
+      opacity: 1;
     }
-    
+
     .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
-        width: 0;
-        height: 0;
-        top: 220px;
-        left: 93px;
-        background: $themeColorTwo;
-        padding: 17px;
-        border-radius: $borderRadius;
-        color: $primary_color_two;
-        opacity: 0;
-        @include smooth_animation;
+      opacity: 1;
     }
-    
-    &:hover {
-        .cart-custom-button {
-            opacity: 1;
-        }
-        
-        .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 
@@ -415,16 +417,16 @@ ul.products li.product {
 
 .woocommerce {
   div.product {
-      form.cart {
-          margin-bottom: 1em;
-          
-        .variations {
-          @media #{$mobile-max} {
-            margin-bottom: 0;
-          }
+    form.cart {
+      margin-bottom: 1em;
+
+      .variations {
+        @media #{$mobile-max} {
+          margin-bottom: 0;
         }
       }
-      
+    }
+
 
     form.cart .variations {
       td.label {
@@ -492,8 +494,8 @@ ul.products li.product {
 
 //Cart page
 .woocommerce ul#shipping_method li input {
-    margin: 6px .4375em 0 0;
-    appearance: auto;
+  margin: 6px .4375em 0 0;
+  appearance: auto;
 }
 
 // Checkout page
@@ -523,8 +525,9 @@ ul.products li.product {
 }
 
 .woocommerce-checkout #payment ul.payment_methods li input {
-    appearance: auto;    
+  appearance: auto;
 }
+
 // Checkout page end
 
 .woocommerce-Reviews {
@@ -578,7 +581,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-    z-index: 33;
+  z-index: 33;
 
   @media screen and (min-width: 768px) {
     display: block;
@@ -647,7 +650,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
 
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
   background-color: indianred;
-  background-image:  linear-gradient(to right, rgba(220,34,40,1) 0%, rgba(163,6,12,1) 51%, rgba(220,34,40,1) 100%);
+  background-image: linear-gradient(to right, rgba(220, 34, 40, 1) 0%, rgba(163, 6, 12, 1) 51%, rgba(220, 34, 40, 1) 100%);
 }
 
 #add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
@@ -660,5 +663,17 @@ a.wpgis-popup, a.wpgis-popup:hover {
 
   & .count {
     display: none;
+  }
+}
+
+.woocommerce-tabs {
+  & .description_tab {
+    color: $themeColorOne !important;
+  }
+}
+
+.products {
+  & .wc-forward {
+    margin-top: 8px !important;
   }
 }

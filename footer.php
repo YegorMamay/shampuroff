@@ -27,6 +27,35 @@
 <div class="is-hide"><?php svg_sprite(); ?></div>
 
 <?php wp_footer(); ?>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+<script>
+    var decorVideoImage = document.querySelectorAll('.js-parallax-group');
+    var catDecorIcon = document.querySelectorAll('.js-cat-parallax');
+    var catDecorImage = document.querySelectorAll('.js-cat-img');
 
+    document.addEventListener("DOMContentLoaded", function () {
+
+        new simpleParallax(decorVideoImage, {
+            delay: 0,
+            scale: 1.12,
+            orientation: 'left',
+            overflow: true
+        });
+
+        new simpleParallax(catDecorIcon, {
+            delay: 0,
+            scale: 1.12,
+            orientation: 'down',
+            overflow: true
+        });
+
+        new simpleParallax(catDecorImage, {
+            delay: 0,
+            scale: 1.12,
+            orientation: 'down',
+            overflow: true
+        });
+    })
+</script>
 </body>
 </html>
