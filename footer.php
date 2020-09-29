@@ -37,23 +37,26 @@
 
         new simpleParallax(decorVideoImage, {
             delay: 0,
-            scale: 1.12,
+            scale: 1.65,
             orientation: 'left',
-            overflow: true
+            overflow: true,
+            customWrapper: '.block-video'
         });
 
         new simpleParallax(catDecorIcon, {
             delay: 0,
-            scale: 1.12,
+            scale: 1.65,
             orientation: 'down',
-            overflow: true
+            overflow: true,
+            customWrapper: '.categories-section'
         });
 
         new simpleParallax(catDecorImage, {
             delay: 0,
-            scale: 1.12,
+            scale: 1.6,
             orientation: 'down',
-            overflow: true
+            overflow: true,
+            customWrapper: '.categories-section'
         });
     })
 </script>
