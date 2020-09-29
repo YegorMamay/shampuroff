@@ -10584,7 +10584,7 @@ a.wpgis-popup, a.wpgis-popup:hover {
 }
 
 .woocommerce-loop-category__title {
-  font-size: 22px !important;
+  font-size: 26px !important;
 }
 
 .woocommerce-loop-category__title .count {
@@ -12534,6 +12534,7 @@ select {
 }
 
 .categories-section__title {
+  color: #1A191C;
   display: block;
   width: 100%;
   font-size: 15px;
